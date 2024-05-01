@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, "../frontend/dist")));
 // CORS configuration
 const corsOptions = {
   credentials: true,
-  origin: "http://localhost:5173",
+  origin: "https://swiptory-fd.vercel.app",
 };
 
 // Enable CORS with configured options

@@ -2,8 +2,8 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 exports.auth = (req, res, next) => {
-    // Check authorization header
-    const token = req.cookies.token || req.body.token;
+     //Extracting Token from headers
+    const token = req.headers.authorization?.split(' ')[1];
 
     //if token is missing return no response
     if (!token) {
